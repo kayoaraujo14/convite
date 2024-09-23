@@ -1,0 +1,131 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8e5e5, #ffe4e1);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    padding: 40px 30px;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.card::before {
+    content: "❤️";
+    font-size: 50px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #d6336c;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 15px 0;
+}
+
+strong {
+    color: #d6336c;
+}
+
+button {
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b12a56;
+}
+
+/* Corações Flutuantes */
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(214, 51, 108, 0.7);
+    transform: rotate(45deg);
+    animation: float 5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: inherit;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Posição aleatória dos corações */
+.heart:nth-child(1) { left: 10%; animation-duration: 6s; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-duration: 7s; animation-delay: 1s; }
+.heart:nth-child(3) { left: 50%; animation-duration: 5s; animation-delay: 2s; }
+.heart:nth-child(4) { left: 70%; animation-duration: 6s; animation-delay: 3s; }
+.heart:nth-child(5) { left: 90%; animation-duration: 5s; animation-delay: 4s; }

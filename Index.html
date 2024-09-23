@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonte Romântica do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h1>Um Convite Especial</h1>
+            <p>Querida <span id="nome-namorada">Leticia</span>,</p>
+            <p>Tenho uma surpresa muito especial para você! ❤️</p>
+            <p>Gostaria de te convidar para um jantar romântico no <strong id="local-jantar">Vila Mosquito</strong>, localizado em <strong id="endereco">R. Antônio Augusto, 786</strong>.</p>
+            <p>Reservei a noite de <strong id="data-jantar">05 de Outubro de 2024 às 20:00</strong> especialmente para nós dois.</p>
+            <p>Será uma noite inesquecível, só nós dois, sob a luz das velas.</p>
+            <p>Mal posso esperar para compartilhar esse momento com você!</p>
+            <p>Com todo o meu amor,<br>Kayo Araújo 💖</p>
+            <button onclick="imprimirConvite()">Imprimir Convite</button>
+        </div>
+    </div>
+
+    <!-- Script para imprimir o convite -->
+    <script>
+        function imprimirConvite() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
